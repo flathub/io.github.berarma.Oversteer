@@ -28,20 +28,9 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "pycairo"
     sources:
-      - &id001
-        type: file
+      - type: file
         url: https://files.pythonhosted.org/packages/1c/41/91955188e97c7b85fbaac6bbf4e33de028899e0aa31bdce99b1afe2eeb17/pycairo-1.26.0.tar.gz
         sha256: 2dddd0a874fbddb21e14acd9b955881ee1dc6e63b9c549a192d613a907f9cbeb
-  - name: python3-pygobject
-    buildsystem: simple
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pygobject"
-    sources:
-      - *id001
-      - type: file
-        url: https://files.pythonhosted.org/packages/f9/9e/6bab1ed3bd878f0912d9a0600c21f3d88bab0e8a8d4c3ce50f5cf336faaf/pygobject-3.48.2.tar.gz
-        sha256: c3c0a7afbe5b2c1c64dc0530109b4dd571085153dbedfbccb8ec7c5ad233f977
   - name: python3-pyudev
     buildsystem: simple
     build-commands:
@@ -75,8 +64,7 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "meson-python"
     sources:
-      - &id004
-        type: file
+      - type: file
         url: https://files.pythonhosted.org/packages/aa/5f/bb5970d3d04173b46c9037109f7f05fc8904ff5be073ee49bb6ff00301bc/pyproject_metadata-0.8.0-py3-none-any.whl
         sha256: ad858d448e1d3a1fb408ac5bac9ea7743e7a8bbb472f2693aaa334d2db42f526
       - type: file
@@ -125,7 +113,7 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/a4/6e/681d39b71d5f0d6a1b1dc87d7333331f9961b5ab6a2ad6372d6cf3f8b04c/fonttools-4.53.0.tar.gz
         sha256: c93ed66d32de1559b6fc348838c7572d5c0ac1e4a258e76763a5caddd8944002
-      - &id002
+      - &id001
         type: file
         url: https://files.pythonhosted.org/packages/65/6e/09db70a523a96d25e115e71cc56a6f9031e7b8cd166c1ac8438307c14058/numpy-1.26.4.tar.gz
         sha256: 2a02aba9ed12e4ac4eb3ea9421c420301a0c6460d9830d74a9df87efa4912010
@@ -174,7 +162,7 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "scipy" --no-build-isolation
     sources:
-      - *id002
+      - *id001
       - type: file
         url: https://files.pythonhosted.org/packages/30/85/cdbf2c3c460fe5aae812917866392068a88d02f07de0fe31ce738734c477/scipy-1.12.0.tar.gz
         sha256: 4bf5abab8a36d20193c698b0f1fc282c1d083c94723902c447e5d2f1780936a3
