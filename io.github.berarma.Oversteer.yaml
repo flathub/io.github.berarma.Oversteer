@@ -16,6 +16,7 @@ finish-args:
   - --filesystem=/sys/devices
   - --device=all
 cleanup:
+  - '/app/lib/cmake'
   - '/include'
   - '/lib/pkgconfig'
   - '/man'
@@ -39,8 +40,8 @@ modules:
       - PREFIX=/app
     sources:
       - type: git
-        tag: v0.3.24
         url: https://github.com/OpenMathLib/OpenBLAS.git
+        tag: v0.3.24
         commit: 9f815cf1bf16b4e64d4aee681b33558fc090b62a
   - python-dependencies.yaml
   - name: oversteer
@@ -50,4 +51,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/berarma/oversteer.git
-        commit: 63453b55d1ce5b08310437e253920b7dea33aef9
+        commit: a418ffab184bf2b82df3434776fe80e3029f6cb6
