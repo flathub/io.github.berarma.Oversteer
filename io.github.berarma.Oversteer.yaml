@@ -1,6 +1,6 @@
 app-id: io.github.berarma.Oversteer
 runtime: org.gnome.Platform
-runtime-version: '46'
+runtime-version: '48'
 sdk: org.gnome.Sdk
 command: oversteer
 finish-args:
@@ -28,6 +28,7 @@ cleanup:
   - '*.a'
 modules:
   - shared-modules/lzo/lzo.json
+  - shared-modules/libcanberra/libcanberra.json
   - name: openblas
     no-autogen: true
     make-args:
